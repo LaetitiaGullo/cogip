@@ -2,9 +2,9 @@
 declare(strict_types=1);
 require_once "Manager.php";
 
-class CompaniesManager extends Manager
+class LastCompaniesManager extends Manager
 {
-    public function getCompanies()
+    public function getLastCompanies()
     {
         $db = $this->connectDb();
         try {

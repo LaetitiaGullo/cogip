@@ -1,15 +1,15 @@
 <?php
-require_once "./Model/InvoicesManager.php";
-require_once "./Model/ContactsManager.php";
-require_once "./Model/CompaniesManager.php";
+require_once "./Model/LastInvoicesManager.php";
+require_once "./Model/LastContactsManager.php";
+require_once "./Model/LastCompaniesManager.php";
 
 class HomepageController
 {
-    public function render()
+    public function render(array $GET, array $POST)
     {
-        $invoices = new InvoicesManager();
-        $contacts = new ContactsManager();
-        $companies = new CompaniesManager();
+        $invoices = new LastInvoicesManager();
+        $contacts = new LastContactsManager();
+        $companies = new LastCompaniesManager();
 
         require "./View/homepage.php";
     }

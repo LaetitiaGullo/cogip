@@ -15,11 +15,18 @@
 
   <header>
     <div class="navbar">
-      <a href="#">Home</a>
-      <a href="#">Invoices</a>
-      <a href="#">Contacts</a>
-      <a href="#">Companies</a>
-      <a href="#">Admin</a>
+      <a class="navlink" href="/">Home</a>
+      <a class="navlink" href="/?page=invoices">Invoices</a>
+      <a class="navlink" href="/?page=contacts">Contacts</a>
+      <div class="dropdown">
+        <a class="navlink" href="/?page=companies">Companies</a>
+          <div class="dropdown-content">
+            <a class="droplink" href="/?page=companies">All</a>
+            <a class="droplink" href="/?page=clients">Clients</a>
+            <a class="droplink" href="/?page=suppliers">Suppliers</a>
+          </div>
+      </div>
+      <a class="navlink" href="#">Connexion</a>
     </div>
   </header>
   

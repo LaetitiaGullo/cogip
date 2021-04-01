@@ -1,6 +1,6 @@
-<?php require 'includes/header.php'?>
+<?php require_once 'includes/header.php'?>
 
-<h1>Welwome to the Cogip</h1>
+<h1>Welcome to the Cogip</h1>
 
 <!-- 5 last invoices -->
 
@@ -8,7 +8,7 @@
 
 <?php
 
-foreach ($invoices->getInvoices() as $key => $invoice):
+foreach ($invoices->getLastInvoices() as $key => $invoice):
 ?>
 
     <p>
@@ -23,7 +23,7 @@ foreach ($invoices->getInvoices() as $key => $invoice):
 
 <?php
 
-foreach ($contacts->getContacts() as $key => $contact): ?>
+foreach ($contacts->getLastContacts() as $key => $contact): ?>
     <p>
         <?= $contact["contactName"]." - ".$contact["phoneNumber"]." - ".$contact["email"]." - ".$contact["company"]?>
     </p>
@@ -36,11 +36,11 @@ foreach ($contacts->getContacts() as $key => $contact): ?>
 
 <?php
 
-foreach ($companies->getCompanies() as $key => $company): ?>
+foreach ($companies->getLastCompanies() as $key => $company): ?>
     <p>
         <?= $company["companyName"]." - ".$company["VAT"]." - ".$company["country"]." - ".$company["companyType"]?>
     </p>
     
 <?php endforeach ?>
 
-<?php require 'includes/footer.php'?>
+<?php require_once 'includes/footer.php'?>

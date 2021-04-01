@@ -2,9 +2,9 @@
 declare(strict_types=1);
 require_once "Manager.php";
 
-class InvoicesManager extends Manager
+class LastInvoicesManager extends Manager
 {
-    public function getInvoices()
+    public function getLastInvoices()
     {
         $db = $this->connectDb();
         try {

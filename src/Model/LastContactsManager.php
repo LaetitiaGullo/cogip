@@ -2,9 +2,9 @@
 declare(strict_types=1);
 require_once "Manager.php";
 
-class ContactsManager extends Manager
+class LastContactsManager extends Manager
 {
-    public function getContacts()
+    public function getLastContacts()
     {
         $db = $this->connectDb();
         try {
