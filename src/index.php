@@ -6,6 +6,8 @@ require_once "Controller/ContactspageController.php";
 require_once "Controller/CompaniespageController.php";
 require_once "Controller/ClientspageController.php";
 require_once "Controller/SupplierspageController.php";
+require_once "Controller/ConnexionpageController.php";
+require_once "Controller/InscriptionpageController.php";
 
 $controller = new HomepageController();
 
@@ -28,6 +30,14 @@ elseif (isset($_GET["page"]) && $_GET["page"] === "clients")
 elseif (isset($_GET["page"]) && $_GET["page"] === "suppliers")
 {
     $controller = new SupplierspageController();
+}
+elseif (isset($_GET["page"]) && $_GET["page"] === "connexion")
+{
+    $controller = new ConnexionpageController();
+}
+elseif (isset($_GET["page"]) && $_GET["page"] === "inscription")
+{
+    $controller = new InscriptionpageController();
 }
 
 $controller->render($_GET, $_POST);

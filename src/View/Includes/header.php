@@ -26,7 +26,13 @@
             <a class="droplink" href="/?page=suppliers">Suppliers</a>
           </div>
       </div>
-      <a class="navlink" href="#">Connexion</a>
+      <div class="dropdown">
+        <a class="navlink" href="#">User space</a>
+          <div class="dropdown-content">
+            <a class="droplink" href="/?page=connexion">Connexion</a>
+            <a class="droplink" href="/?page=inscription">Inscription</a>
+          </div>
+      </div>
     </div>
   </header>
   
