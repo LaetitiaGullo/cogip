@@ -1,3 +1,6 @@
+<style>
+    <?php require_once "./CSS/style.css"?>
+</style>
 <?php require_once 'includes/header.php'?>
 
 <h1>Suppliers</h1>

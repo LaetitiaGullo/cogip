@@ -7,6 +7,57 @@ class ConnexionpageController
     public function render(array $GET, array $POST)
     {
         $connexion = new ConnexionManager();
+
+        function verifyInput($var)
+        {
+            $var = trim($var);
+            $var = stripslashes($var);
+            $var = htmlspecialchars($var);
+            return $var;
+        }
+
+        if($_SERVER["REQUEST_METHOD"] == "POST")
+        {
+            $success = true;
+            $username = verifyInput($_POST["username"]);
+            $password = verifyInput($_POST["pass"]);
+            $data = $connexion->verifyUsername($username);
+
+
+            if(!isset($username) || empty($username)){
+                $success = false;
+                echo "Please enter your email address";
+            }
+
+            if(!isset($password) || empty($password)){
+                $success = false;
+                echo "Please enter your password";
+            }
+
+            
+            if($data) {
+                if(password_verify($password, $data["pass"])){
+                    $success = true;
+                    echo "success";                    
+                } else {
+                    $success = false;
+                    echo "Invalid username and/or password";                
+                }
+            } else {
+                $success = false;
+                echo "Invalid username and/or password";  
+            }
+
+            // if (/*$data["username"] ||*/ !password_verify($_POST["pass"], $data["pass"])){
+            //     //$success = false;
+            //     echo "Invalid username and/or password";
+            // }
+
+            // if ($data["username"] && (password_verify($_POST["pass"], $data["pass"]))){
+            //     $success = true;
+            //     echo "success";
+            // }
+        }
         
         require "./View/connexionpage.php";
     }

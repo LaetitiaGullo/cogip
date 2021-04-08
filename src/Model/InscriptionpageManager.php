@@ -17,4 +17,18 @@ class InscriptionManager extends Manager
             die("Error : " . $e->getMessage());
         }    
     }
+
+    public function verifyUsername()
+    {
+        $db = $this->connectDb();
+
+        try {
+            $result = $db->prepare('SELECT username FROM `Users` WHERE (username = "' . $_POST['username'] . '")');
+            $result->execute();
+            return $result -> fetch();
+        
+        } catch (Exception $e) {
+            die("Error : " . $e->getMessage());
+        }
+    }
 }

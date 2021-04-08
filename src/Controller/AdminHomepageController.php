@@ -1,7 +1,7 @@
 <?php
-require_once "./Model/HomepageManager.php";
+require_once "./Model/AdminHomepageManager.php";
 
-class HomepageController
+class AdminHomepageController
 {
     public function render(array $GET, array $POST)
     {
@@ -9,6 +9,6 @@ class HomepageController
         $contacts = new LastContactsManager();
         $companies = new LastCompaniesManager();
 
-        require "./View/homepage.php";
+        require "./View/adminHomepage.php";
     }
 }

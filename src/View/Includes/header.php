@@ -31,6 +31,7 @@
           <div class="dropdown-content">
             <a class="droplink" href="/?page=connexion">Connexion</a>
             <a class="droplink" href="/?page=inscription">Inscription</a>
+            <a class="droplink" href="/?page=admin">Admin</a>
           </div>
       </div>
     </div>

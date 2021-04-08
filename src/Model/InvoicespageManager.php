@@ -9,7 +9,7 @@ class AllInvoicesManager extends Manager
         $db = $this->connectDb();
         try {
             // /!\ add type from Company or from Company_type !
-            $result = $db->prepare("SELECT invoiceNumber, invoiceDate, companyName FROM `Invoice` ORDER BY invoiceDate DESC");
+            $result = $db->prepare("SELECT invoiceNumber, invoiceDate, invoiceCompany FROM `Invoice` ORDER BY invoiceDate DESC");
             $result->execute();
             return $result;
 

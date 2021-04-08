@@ -17,18 +17,44 @@ class InscriptionpageController
         
         if($_SERVER["REQUEST_METHOD"] == "POST")
         {
+            $success = true;
             $username = verifyInput($_POST["username"]);
             $password = verifyInput($_POST["pass"]);
+            $passwordConf = verifyInput($_POST["conf-pass"]);
         
-            if(!isset($username) || !filter_var($username, FILTER_VALIDATE_EMAIL)){
-                echo "Enter your email address";
+            if(!isset($username) || empty($username)){
+                $success = false;
+                echo "Please enter an email address";
             }
 
-            if(empty($password)){
-                echo "Enter your password";
+            if(!filter_var($username, FILTER_VALIDATE_EMAIL)){
+                $success = false;
+                echo "Not a valid email address";
             }
 
-            $newUser = $inscription -> setInscription();
+            if ($inscription->verifyUsername()){
+                $success = false;
+                echo "This email address already exists";
+            }
+
+            if(!isset($password) || empty($password)){
+                $success = false;
+                echo "Please enter a password";
+            }
+
+            if(strlen($password) < 4){
+                $success = false;
+                echo "The password must contains at least 4 characters";
+            }
+
+            if($password !== $passwordConf){
+                $success = false;
+                echo "Password confirmation does not match";
+            }
+
+            if($success){
+                /*$newUser =*/ $inscription -> setInscription();
+            }
         }
 
         require "./View/inscriptionpage.php";
