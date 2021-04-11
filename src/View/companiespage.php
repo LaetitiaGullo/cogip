@@ -3,7 +3,7 @@
 </style>
 <?php require_once 'includes/header.php'?>
 
-<h1>Companies</h1>
+<h1>All companies</h1>
 
 <?php
 

@@ -3,7 +3,7 @@
 </style>
 <?php require_once 'includes/header.php'?>
 
-<h1>Invoices</h1>
+<h1>All invoices</h1>
 
 <?php
 

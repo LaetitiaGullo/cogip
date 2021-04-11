@@ -1,4 +1,5 @@
 <?php
+require_once "./Model/HomepageManager.php";
 require_once "./Model/AdminHomepageManager.php";
 
 class AdminHomepageController

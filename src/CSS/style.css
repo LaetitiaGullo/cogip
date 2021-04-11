@@ -12,9 +12,10 @@ header {
 }
 
 .navbar {
+    width: 85%!important;
+    height: auto;
     display: flex;
     justify-content: space-between;
-    width: 65%;
     margin: auto;
 }
 
@@ -59,6 +60,16 @@ header {
 main {
     width: 90%;
     margin: auto;
+    text-align: left!important;
+}
+
+hr {
+    margin-top: 30px;
+    width: 100%!important;
+}
+
+p {
+    font-size: 14px;
 }
 
 h1 {
@@ -66,10 +77,58 @@ h1 {
     text-align: center;
     color: grey;
     font-variant: small-caps;
-    text-decoration: underline;
+    text-decoration: none!important;
+    /* text-decoration: underline;
     text-decoration-thickness: 1px;
-    text-underline-position: under;
+    text-underline-position: under; */
 }
+
+.add-btn {
+    width: 350px;
+    height: auto;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-btn a {
+    text-decoration: none;
+    padding: 3px 10px;
+    color: rgb(230, 230, 230);
+    background-color: grey;
+    font-variant: small-caps;
+}
+
+.add-btn a:hover {
+    transform: scale(1.1);
+}
+
+/*.close {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup {
+    margin: auto;
+    padding: 15px 10px;
+    top: 1px;
+    left: 1px;
+    background-color: rgb(255, 147, 147);
+    border: red 1px solid;
+    box-shadow: 0px 8px 16px 0px rgba(255, 1, 1, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    width: 200px;
+    position: absolute;
+    transition: all 5s ease-in-out;
+  }*/
+
 
 h2 {
     font-size: 20px;

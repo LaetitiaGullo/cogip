@@ -20,21 +20,28 @@
       <a class="navlink" href="/?page=contacts">Contacts</a>
       <div class="dropdown">
         <a class="navlink" href="/?page=companies">Companies</a>
-          <div class="dropdown-content">
-            <a class="droplink" href="/?page=companies">All</a>
-            <a class="droplink" href="/?page=clients">Clients</a>
-            <a class="droplink" href="/?page=suppliers">Suppliers</a>
-          </div>
+        <div class="dropdown-content">
+          <a class="droplink" href="/?page=companies">All</a>
+          <a class="droplink" href="/?page=clients">Clients</a>
+          <a class="droplink" href="/?page=suppliers">Suppliers</a>
+        </div>
       </div>
       <div class="dropdown">
         <a class="navlink" href="#">User space</a>
-          <div class="dropdown-content">
-            <a class="droplink" href="/?page=connexion">Connexion</a>
-            <a class="droplink" href="/?page=inscription">Inscription</a>
-            <a class="droplink" href="/?page=admin">Admin</a>
-          </div>
+        <div class="dropdown-content">
+          <a class="droplink" href="/?page=inscription">Inscription</a>
+          <a class="droplink" href="/?page=connexion">Connexion</a>
+        </div>
       </div>
+      <!-- <div class="dropdown"> -->
+      <a class="navlink" href="/?page=admin">Admin</a>
+      <!-- <div class="dropdown-content">
+            <a class="droplink" href="#">+Invoice</a>
+            <a class="droplink" href="#">+Contact</a>
+            <a class="droplink" href="#">+Company</a>
+          </div>
+      </div> -->
     </div>
   </header>
-  
+
   <main>

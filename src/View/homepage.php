@@ -4,6 +4,7 @@
 <?php require_once 'includes/header.php'?>
 
 <h1>Welcome to the Cogip</h1>
+<hr>
 
 <!-- 5 last invoices -->
 
@@ -19,6 +20,7 @@ foreach ($invoices->getLastInvoices() as $key => $invoice):
     </p>
 
 <?php endforeach ?>
+<hr>
 
 <!-- 5 last contacts -->
 
@@ -28,10 +30,11 @@ foreach ($invoices->getLastInvoices() as $key => $invoice):
 
 foreach ($contacts->getLastContacts() as $key => $contact): ?>
     <p>
-        <?= $contact["contactName"]." - ".$contact["phoneNumber"]." - ".$contact["email"]." - ".$contact["company"]?>
+        <?= $contact["contactName"]." - ".$contact["phoneNumber"]." - ".$contact["email"]." - ".$contact["company"] ?>
     </p>
     
 <?php endforeach ?>
+<hr>
 
 <!-- 5 last companies -->
 

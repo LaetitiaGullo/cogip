@@ -3,7 +3,7 @@
 </style>
 <?php require_once 'includes/header.php'?>
 
-<h1>Contacts</h1>
+<h1>All contacts</h1>
 
 <?php
 

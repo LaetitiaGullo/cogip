@@ -1,9 +1,16 @@
 <style>
     <?php require_once "./CSS/style.css"?>
 </style>
-<?php require_once 'includes/header.php'?>
+<?php require_once 'includes/headerAdmin.php'?>
 
-<h1>Welcome to the Cogip</h1>
+<h1>Welcome Jean-Christian</h1>
+
+<div class="add-btn">
+<a href="/?page=addinvoice">+Invoice</a>
+<a href="/?page=addcontact">+Contact</a>
+<a href="/?page=addcompany">+Company</a>
+</div>
+<hr>
 
 <!-- 5 last invoices -->
 
@@ -19,6 +26,7 @@ foreach ($invoices->getLastInvoices() as $key => $invoice):
     </p>
 
 <?php endforeach ?>
+<hr>
 
 <!-- 5 last contacts -->
 
@@ -32,6 +40,7 @@ foreach ($contacts->getLastContacts() as $key => $contact): ?>
     </p>
     
 <?php endforeach ?>
+<hr>
 
 <!-- 5 last companies -->
 
